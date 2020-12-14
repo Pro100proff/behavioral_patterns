@@ -1,4 +1,5 @@
 package ru.geekbrains.observer;
 
-public class Observer {
+public interface Observer {
+    void update(ObservableSubject subject, Object arg);
 }

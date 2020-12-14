@@ -1,6 +1,8 @@
-package ru.geekbrains.command;
+package ru.geekbrains.command.after;
 
-public class RemoteControl {
+import ru.geekbrains.command.after.Command;
+
+public class SmartHouseController {
     private Command command;
 
     public void setCommand(Command command) {
@@ -11,5 +13,9 @@ public class RemoteControl {
         if(command != null) {
             command.execute();
         }
+    }
+
+    public void undo(){
+        command.undo();
     }
 }

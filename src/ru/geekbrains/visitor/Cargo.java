@@ -1,4 +1,4 @@
-package ru.geekbrains.mediator.after;
+package ru.geekbrains.visitor;
 
 public class Cargo {
 }

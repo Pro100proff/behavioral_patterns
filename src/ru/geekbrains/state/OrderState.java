@@ -1,4 +1,6 @@
 package ru.geekbrains.state;
 
-public interface State {
+public interface OrderState {
+    void cancel();
+    void changeDestination(String dest);
 }

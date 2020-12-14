@@ -1,5 +1,6 @@
-package ru.geekbrains.command;
+package ru.geekbrains.command.after;
 
 public interface Command {
     void execute();
+    void undo();
 }

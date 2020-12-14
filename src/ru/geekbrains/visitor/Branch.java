@@ -1,6 +1,7 @@
-package ru.geekbrains.mediator.after;
+package ru.geekbrains.visitor;
 
-public class Branch {
+public class Branch implements Element{
+    private String name;
     private String latitude;
     private String longitude;
 
@@ -15,5 +16,10 @@ public class Branch {
 
     public String getLongitude() {
         return longitude;
+    }
+
+    @Override
+    public String accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 }
