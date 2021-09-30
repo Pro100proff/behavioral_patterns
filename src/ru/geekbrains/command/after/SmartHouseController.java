@@ -2,20 +2,20 @@ package ru.geekbrains.command.after;
 
 import ru.geekbrains.command.after.Command;
 
-public class SmartHouseController {
-    private Command command;
+import java.util.List;
 
-    public void setCommand(Command command) {
+public class SmartHouseController {
+    private List<Command> command;
+
+    public void setCommand(List<Command> command) {
         this.command = command;
     }
 
     public void perform(){
-        if(command != null) {
-            command.execute();
-        }
+        command.forEach(Command::execute);
     }
 
     public void undo(){
-        command.undo();
+        command.forEach(Command::undo);
     }
 }

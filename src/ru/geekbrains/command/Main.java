@@ -5,14 +5,15 @@ import ru.geekbrains.command.after.DoorCommand;
 import ru.geekbrains.command.after.LightCommand;
 import ru.geekbrains.command.after.SmartHouseController;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         SmartHouseController controller = new SmartHouseController();
         Command lightCommand = new LightCommand();
-        controller.setCommand(lightCommand);
-        controller.perform();
         Command doorCommand = new DoorCommand();
-        controller.setCommand(doorCommand);
+        controller.setCommand(List.of(lightCommand, doorCommand));
         controller.perform();
+        controller.undo();
     }
 }

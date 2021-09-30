@@ -5,4 +5,9 @@ public class Peperoni extends PizzaCreator{
     protected void prepare() {
         System.out.println("Кладу много колбасы");
     }
+
+    @Override
+    protected void bake() {
+        System.out.println("пеку при температуре 180");
+    }
 }

@@ -12,9 +12,6 @@ public abstract class PizzaCreator {
         System.out.println("Пицца запаковывается");
     }
 
-    private void bake() {
-        System.out.println("Пицца печется");
-    }
-
     protected abstract void prepare();
+    protected abstract void bake();
 }

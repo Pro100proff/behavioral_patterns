@@ -10,7 +10,7 @@ public class ShopService {
 
     public void createReport(){
         System.out.println("Вычитываю информацию по доступным товарам");
-        Integer rest = 5;
+        int rest = 5;
         System.out.println("Остаток : " + rest);
         strategy.showShopName();
     }

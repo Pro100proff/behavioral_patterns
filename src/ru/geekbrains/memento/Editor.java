@@ -5,38 +5,38 @@ public class Editor {
 
     private EditorMemento memento;
 
-    public String getText(){
+    public String getText() {
         return builder.toString();
     }
 
-    public void write(String text){
+    public void write(String text) {
         builder.append(text);
     }
 
-    public void clear(){
+    public void clear() {
         builder = new StringBuilder();
     }
 
-    public void save(){
+    public void backup() {
         memento = new EditorMemento(builder.toString());
     }
 
-    public void restore(){
+    public void restore() {
         builder = new StringBuilder(memento.getText());
     }
 
     public static void main(String[] args) {
         Editor editor = new Editor();
         editor.write("Hello world");
-        editor.save();
+        editor.backup();
         editor.clear();
-        System.out.println("After clear : " +editor.getText());
+        System.out.println("After clear : " + editor.getText());
         editor.restore();
         System.out.println("After restore : " + editor.getText());
     }
 }
 
-class EditorMemento{
+class EditorMemento {
     private String text;
 
     public EditorMemento(String text) {

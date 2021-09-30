@@ -7,8 +7,8 @@ public class StringVisitor implements Visitor {
     }
 
     @Override
-    public String visit(Route branch) {
-        return null;
+    public String visit(Route route) {
+        return "date of departure = " + route.getDepartureDate();
     }
 
     @Override

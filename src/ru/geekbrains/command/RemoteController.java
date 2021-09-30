@@ -15,4 +15,11 @@ public class RemoteController {
     public void turnOffLight(){
         light.off();
     }
+    public void openDoor(){
+        door.open();
+    }
+    public void closeDoor(){
+        door.close();
+    }
+
 }

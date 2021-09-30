@@ -3,6 +3,9 @@ package ru.geekbrains.observer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * наблюдаемая сущность(датчики)
+ */
 public abstract class ObservableSubject {
     private List<Observer> observers = new ArrayList<>();
 

@@ -5,4 +5,9 @@ public class Cheese extends PizzaCreator{
     protected void prepare() {
         System.out.println("Добавляю много сыра");
     }
+
+    @Override
+    protected void bake() {
+        System.out.println("пеку при температуре 100");
+    }
 }
